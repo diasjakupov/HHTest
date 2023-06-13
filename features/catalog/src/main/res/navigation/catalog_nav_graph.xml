@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/catalog_nav_graph"
+    app:startDestination="@id/catalog">
+    <fragment
+        android:id="@+id/catalog"
+        android:name="com.example.catalog.ui.catalog.CatalogFragment"
+        android:label="fragment_catalog"
+        tools:layout="@layout/fragment_catalog">
+        <action
+            android:id="@+id/action_catalog_to_mealsFragment"
+            app:destination="@id/mealsFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim">
+
+        </action>
+
+    </fragment>
+    <fragment
+        android:id="@+id/mealsFragment"
+        android:name="com.example.catalog.ui.meals.MealsFragment"
+        android:label="fragment_meals"
+        tools:layout="@layout/fragment_meals">
+        <action
+            android:id="@+id/action_mealsFragment_to_mealDetailDialogFragment"
+            app:destination="@id/mealDetailDialogFragment" />
+        <argument
+            android:name="categoryId"
+            app:argType="integer" />
+        <argument
+            android:name="categoryName"
+            app:argType="string" />
+
+    </fragment>
+    <dialog
+        android:id="@+id/mealDetailDialogFragment"
+        android:name="com.example.catalog.ui.detail.MealDetailDialogFragment"
+        android:label="MealDetailDialogFragment" >
+        <argument
+            android:name="mealDetail"
+            app:argType="com.example.core.models.MealEntry" />
+    </dialog>
+</navigation>

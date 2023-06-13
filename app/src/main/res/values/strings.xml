@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">HHTest</string>
+    <string name="home">Главная</string>
+    <string name="search">Поиск</string>
+    <string name="shopping_cart">Корзина</string>
+    <string name="account">Аккант</string>
+    <string name="title_features">features</string>
+</resources>

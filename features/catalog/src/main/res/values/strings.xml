@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">presentation</string>
+    <string name="home">Главная</string>
+    <string name="search">Поиск</string>
+    <string name="shopping_cart">Корзина</string>
+    <string name="profile">Профиль</string>
+</resources>
